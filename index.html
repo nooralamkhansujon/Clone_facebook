@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<!-- nav section  -->
+<nav class="navbar navbar-expand-lg ">
+    <div class="container">
+        <a class="navbar-brand ml-2" id="nav-logo" href="#">WA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="d-flex justify-content-between ml-3">
+                    <form class="form-inline my-2 my-lg-0">
+                    <input type="text" placeholder="Search" class="form-control search_input mr-2" />
+                        <button class="btn btn-success large_btn">Search</button>
+                    </form>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav ml-2  d-flex justify-content-space-between">
+
+                   <!-- nav item -->
+                    <li class="nav_item">
+                        <a class="nav-link " href="#">
+                           <img src="images/user.jpg"  class="nav-image" />
+                           <span class="text-align-center" id="login_user">jakir Khan</span>
+                        </a>
+                    </li>
+                    <!-- end of nav item -->
+
+                    <!-- nav item -->
+                    <li class="nav_item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                     <!-- end of nav item -->
+
+                    <!-- nav item -->
+                    <li class="nav_item">
+                        <a class="nav-link" href="#">Find Friends</a>
+                    </li>
+                    <!-- end of nav item -->
+
+                    <!-- nav item -->
+                    <li class="nav_item user_friends_icon">
+                        <a class="notification_link" id="friends_request">
+                          <i class="fas fa-user-friends"></i>
+                        </a>
+
+                        <span id="request_friend">15</span>
+                    </li>
+                     <!-- end of  nav item -->
+
+                     <!-- nav item -->
+                    <li class="bell_icon nav_item">
+                        <a  class="notification_link" id="notification" >
+                           <i class="fas fa-bell"></i>
+                        </a>
+                        <span id="total_notfication">15</span>
+                    </li>
+                     <!-- end of  nav item -->
+
+
+            <!-- //nav_item notification dropdown  -->
+            <div class="hide collapse_notification" id="collapsenotification" >
+                <div class="card" >
+                    <div class="d-flex mx-2">
+                        <p class="mr-auto text-info" >Notification</p>
+                        <p class="text-info">Mark All as Read</p>
+                    </div>
+                    <div class="card-body">
+
+                    <ul class="collapseList">
+                        <li>
+                            <a href="#" class="row">
+                                <span class="col-md-2">
+                                        <img class="notification_image"
+                                        src="images/user.jpg" alt="">
+                                </span>
+                                <span class="cold-md-10 notification_text">Notification 1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="row">
+                                <span class="col-md-2">
+                                        <img class="notification_image"
+                                        src="images/user.jpg" alt="">
+                                </span>
+                                <span class="cold-md-10 notification_text">Notification 1</span>
+                            </a>
+                            </li>
+                            <li>
+                            <a href="#" class="row">
+                                <span class="col-md-2">
+                                        <img class="notification_image"
+                                        src="images/user.jpg" alt="">
+                                </span>
+                                <span class="cold-md-10 notification_text">Notification 1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="row">
+                                <span class="col-md-2">
+                                        <img class="notification_image"
+                                        src="images/user.jpg" alt="">
+                                </span>
+                                <span class="cold-md-10 notification_text">Notification 1</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- end of nav item notification dropdown -->
+
+            <!-- //nav_item Find Friends dropdown  -->
+            <div class="hide friends_collapse" id="collapsefriends" >
+                <div class="card" >
+                    <div class="d-flex mx-2">
+                        <p class="mr-auto text-info" >Friend Request</p>
+                        <a href="#" class="text-info">
+                            Followers List <span style="font-size:14px; background:red;" class="badge badge-danger" id="total_followers">5</span>
+                        </a>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- all of your friends  -->
+                        <ul class="collapseList">
+
+                            <li>
+                                <a href="#" class="row">
+                                    <span class="col-md-2">
+                                      <img class="notification_image" src="images/user.jpg" alt="">
+                                    </span>
+                                    <span class="col-md-4 notification_text">Atikul Islam</span>
+                                    <span class="col-md-6 pl-3">
+                                        <button class="btn btn-info small_button" >Confirm</button>
+                                        <button class="btn btn-outline-info small_button">Cancel</button>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="row">
+                                    <span class="col-md-2">
+                                            <img class="notification_image"
+                                            src="images/user.jpg" alt="">
+                                    </span>
+                                    <span class="col-md-4 notification_text">Atikul Islam</span>
+                                    <span class="col-md-6 pl-3">
+                                        <button class="btn btn-info small_button">Confirm</button>
+                                        <button class="btn btn-outline-info small_button">Cancel</button>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="row">
+                                    <span class="col-md-2">
+                                        <img class="notification_image"
+                                                src="images/user.jpg" alt="">
+                                    </span>
+                                    <span class="col-md-4 notification_text">Atikul Islam</span>
+                                    <span class="col-md-6 pl-3">
+                                        <button class="btn btn-info small_button">Confirm</button>
+                                        <button class="btn btn-outline-info small_button">Cancel</button>
+                                    </span>
+                                    </a>
+                                </li>
+                        </ul>
+                        <!-- end of all of your friends -->
+
+        <!-- find friends list -->
+        <div class="card">
+            <span class="text-info pl-2">Find Friends</span>
+            <ul class="collapseList mt-2">
+
+                    <li>
+                        <a href="#" class="row">
+                            <span class="col-md-2">
+                                <img class="notification_image"
+                                    src="images/user.jpg" alt="">
+                            </span>
+                            <span class="col-md-4 collapseList-text ">
+                                Notification 1
+                            </span>
+                            <span class="col-md-6 pl-5">
+                                    <button class="btn btn-info small_button">
+                                        Add Friends
+                                    </button>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                            <a href="#" class="row">
+                                <span class="col-md-2">
+                                    <img class="notification_image"
+                                        src="images/user.jpg" alt="">
+                                </span>
+                                <span class="col-md-4 collapseList-text ">
+                                    Notification 1
+                                </span>
+                                <span class="col-md-6 pl-5">
+                                        <button class="btn btn-info small_button">
+                                            Add Friends
+                                        </button>
+                                </span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#" class="row">
+                                <span class="col-md-2">
+                                    <img class="notification_image"
+                                        src="images/user.jpg" alt="">
+                                </span>
+                                <span class="col-md-4 collapseList-text">
+                                    Notification 1
+                                </span>
+                                <span class="col-md-6 pl-5">
+                                    <button class="btn btn-info small_button">
+                                        Add Friends
+                                    </button>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="row">
+                                <span class="col-md-2">
+                                    <img class="notification_image"
+                                            src="images/user.jpg" alt="">
+                                </span>
+                                <span class="col-md-4 collapseList-text">
+                                        Notification 1
+                                </span>
+                                <span class="col-md-6 pl-5">
+                                <button class="btn btn-info small_button">
+                                            Add Friend</button>
+                                </span>
+                            </a>
+                        </li>
+                            <li>
+                                <a href="#" class="row">
+                                    <span class="col-md-2">
+                                        <img class="notification_image"
+                                            src="images/user.jpg" alt="">
+                                    </span>
+                                    <span class="col-md-4 collapseList-text">
+                                        Notification 1
+                                    </span>
+                                    <span class="col-md-6 pl-5">
+                                            <button class="btn btn-info small_button">
+                                            Add Friends
+                                        </button>
+                                    </span>
+                                </a>
+                            </li>
+                </ul>
+
+        </div>
+        <!-- end of  find friends list  -->
+       </div>
+         </div>
+     </div>
+    <!-- end of nav item find friends  dropdown -->
+ </ul>
+
+ </div>
+</div>
+</nav>
+<!-- end of nav section     -->
+
+<!-- maincontent section  -->
+<section id="maincontant" class="mt-1 ml-2">
+      <div class="row">
+          <!-- col-md-2 section start -->
+         <div class="col-md-2 sidebar" style="border-right:0.4px solid rgba(56, 53, 53, 0.9);">
+
+           <ul class="sidebar_section mb-2">
+               <li>
+                   <a href="#" class="d-flex justify-content-start">
+                      <img src="images/user.jpg" class="notification_image"  alt="">
+                      <p id="username" class="section_text_sm ml-4">jakir khan </p>
+                   </a>
+               </li>
+           </ul>
+           <ul class="sidebar_section mb-2">
+               <p class="lead mb-2 sidebar_header pb-2">Suggestion</p>
+                <li>
+                    <a href="#" class="d-flex justify-content-start">
+                       <p id="username" class="section_text_sm ml-4">Find Friends</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-flex justify-content-start">
+                        <p id="username" class="section_text_sm ml-4">Groups</p>
+                    </a>
+                </li>
+            </ul>
+         </div>
+         <!-- col-md-2 section end section -->
+
+          <!-- col-md-6 section post section -->
+         <div class="col-md-5 px-2" style="text-align:center;">
+            <!-- comment section  -->
+            <div class="post-section">
+                <div class="card">
+                    <div class="card-body p-3">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="images/user.jpg" class="notification_image_lg" />
+                            </div>
+                            <div class="col-md-8">
+                                <textarea name="postContent" class="content form-control" id="postContent" cols="50" placeholder="What's on your mind? jakir."></textarea>
+                                <!-- <input type="text" class="content" id="postContent" name="postContent"   /> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of comment section  -->
+
+              <!-- user post list section  -->
+              <div class="postList">
+                 <!-- post list single item  -->
+                 <article class="post_single_item">
+                        <!-- start  post single item header  -->
+                        <div class="post_single_item-header d-flex justify-content-between  px-3 pt-2">
+
+                            <!-- flex item 1 -->
+                            <div class="post_user d-flex justify-content-between">
+                                <a href="#">
+                                    <img src="images/user.jpg" class="notification_image" alt="">
+                                </a>
+                                <a href="#" class="d-flex flex-column ml-2">
+                                    <span id="username_post">atikul islam</span>
+                                    <span class="post_date">19hours</span>
+                                </a>
+                            </div>
+
+                            <!-- flex item 2 -->
+                            <div class="dropdown">
+                                    <button  type="button" id="post_single_user_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>...</span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item "  href="#">Save Post </button>
+                                        <button class="dropdown-item " id="follow_unfollow" href="#">Following</button>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- end of post single item header  -->
+                        <div class="post_single_item-body mt-3">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-8" id="post_content">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quas mollitia nesciunt recusandae nisi? Molestias aut obcaecati ex error! Voluptates.
+                                </div>
+                                <div class="col-md-12 col-sm-8" id="post_image-section">
+                                    <img src="images/user.jpg" class="post_image" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_single_item-footer d-flex justify-content-between mt-3">
+                            <button type="button" class="" id="like_button">Like</button>
+                            <button type="button" class="" id="comment_button">Comment</button>
+                        </div>
+                 </article>
+                 <!-- end of post list single item -->
+                   <!-- post list single item  -->
+                   <article class="post_single_item">
+                        <!-- start  post single item header  -->
+                        <div class="post_single_item-header d-flex justify-content-between  px-3 pt-2">
+
+                            <!-- flex item 1 -->
+                            <div class="post_user d-flex justify-content-between">
+                                <a href="#">
+                                    <img src="images/user.jpg" class="notification_image" alt="">
+                                </a>
+                                <a href="#" class="d-flex flex-column ml-2">
+                                    <span id="username_post">atikul islam</span>
+                                    <span class="post_date">19hours</span>
+                                </a>
+                            </div>
+
+                            <!-- flex item 2 -->
+                            <div class="dropdown">
+                                    <button  type="button" id="post_single_user_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>...</span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item "  href="#">Save Post </button>
+                                        <button class="dropdown-item " id="follow_unfollow" href="#">Following</button>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- end of post single item header  -->
+                        <div class="post_single_item-body mt-3">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-8" id="post_content">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quas mollitia nesciunt recusandae nisi? Molestias aut obcaecati ex error! Voluptates.
+                                </div>
+                                <div class="col-md-12 col-sm-8" id="post_image-section">
+                                    <img src="images/user.jpg" class="post_image" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_single_item-footer d-flex justify-content-between mt-3">
+                            <button type="button" class="" id="like_button">Like</button>
+                            <button type="button" class="" id="comment_button">Comment</button>
+                        </div>
+                 </article>
+                 <!-- end of post list single item -->
+                   <!-- post list single item  -->
+                   <article class="post_single_item">
+                        <!-- start  post single item header  -->
+                        <div class="post_single_item-header d-flex justify-content-between  px-3 pt-2">
+
+                            <!-- flex item 1 -->
+                            <div class="post_user d-flex justify-content-between">
+                                <a href="#">
+                                    <img src="images/user.jpg" class="notification_image" alt="">
+                                </a>
+                                <a href="#" class="d-flex flex-column ml-2">
+                                    <span id="username_post">atikul islam</span>
+                                    <span class="post_date">19hours</span>
+                                </a>
+                            </div>
+
+                            <!-- flex item 2 -->
+                            <div class="dropdown">
+                                    <button  type="button" id="post_single_user_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>...</span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item "  href="#">Save Post </button>
+                                        <button class="dropdown-item " id="follow_unfollow" href="#">Following</button>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- end of post single item header  -->
+                        <div class="post_single_item-body mt-3">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-8" id="post_content">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quas mollitia nesciunt recusandae nisi? Molestias aut obcaecati ex error! Voluptates.
+                                </div>
+                                <div class="col-md-12 col-sm-8" id="post_image-section">
+                                    <img src="images/user.jpg" class="post_image" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_single_item-footer d-flex justify-content-between mt-3">
+                            <button type="button" class="" id="like_button">Like</button>
+                            <button type="button" class="" id="comment_button">Comment</button>
+                        </div>
+                 </article>
+                 <!-- end of post list single item -->
+                   <!-- post list single item  -->
+                   <article class="post_single_item">
+                        <!-- start  post single item header  -->
+                        <div class="post_single_item-header d-flex justify-content-between  px-3 pt-2">
+
+                            <!-- flex item 1 -->
+                            <div class="post_user d-flex justify-content-between">
+                                <a href="#">
+                                    <img src="images/user.jpg" class="notification_image" alt="">
+                                </a>
+                                <a href="#" class="d-flex flex-column ml-2">
+                                    <span id="username_post">atikul islam</span>
+                                    <span class="post_date">19hours</span>
+                                </a>
+                            </div>
+
+                            <!-- flex item 2 -->
+                            <div class="dropdown">
+                                    <button  type="button" id="post_single_user_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>...</span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <button class="dropdown-item "  href="#">Save Post </button>
+                                        <button class="dropdown-item " id="follow_unfollow" href="#">Following</button>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- end of post single item header  -->
+                        <div class="post_single_item-body mt-3">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-8" id="post_content">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quas mollitia nesciunt recusandae nisi? Molestias aut obcaecati ex error! Voluptates.
+                                </div>
+                                <div class="col-md-12 col-sm-8" id="post_image-section">
+                                    <img src="images/user.jpg" class="post_image" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post_single_item-footer d-flex justify-content-between mt-3">
+                            <button type="button" class="" id="like_button">Like</button>
+                            <button type="button" class="" id="comment_button">Comment</button>
+                        </div>
+                 </article>
+                 <!-- end of post list single item -->
+
+
+            </div>
+            <!-- end of user post list    -->
+
+
+         </div>
+          <!-- col-md-6 section post section end -->
+
+         <!-- col-md-2 section group section start -->
+         <div class="col-md-3 pl-1">
+            <p class="lead mb-2 sidebar_header pb-2">Suggestion</p>
+            <!-- group container start -->
+           <div class="group_friends_container">
+                  <!-- group section article  -->
+             <article class="group_friends">
+                    <div class="group_image">
+                       <img src="images/user.jpg" alt="">
+                    </div>
+                    <div class="group_friends_content">
+                       <a href="">Lorem ipsum dolor</a>
+                       <button class="group_button btn btn-outline-info">join Group</button>
+                    </div>
+                   <div class="group_author_section mt-3 d-flex justify-content-between">
+                       <p id="group_author">Nooralam</p>
+                       <span id="total_users">120 Memebers</span>
+                   </div>
+                </article>
+                <!-- end of group section article  -->
+                 <!-- group section article  -->
+                 <article class="group_friends">
+                       <div class="group_image">
+                          <img src="images/user.jpg" alt="">
+                       </div>
+                       <div class="group_friends_content">
+                          <a href="">Lorem ipsum dolor</a>
+                          <button class="group_button btn btn-outline-info">join Group</button>
+                       </div>
+                      <div class="group_author_section mt-3 d-flex justify-content-between">
+                          <p id="group_author">Nooralam</p>
+                          <span id="total_users">120 Memebers</span>
+                      </div>
+                   </article>
+                   <!-- end of group section article  -->
+                    <!-- group section article  -->
+                 <article class="group_friends">
+                       <div class="group_image">
+                          <img src="images/user.jpg" alt="">
+                       </div>
+                       <div class="group_friends_content">
+                          <a href="">Lorem ipsum dolor</a>
+                          <button class="group_button btn btn-outline-info">join Group</button>
+                       </div>
+                      <div class="group_author_section mt-3 d-flex justify-content-between">
+                          <p id="group_author">Nooralam</p>
+                          <span id="total_users">120 Memebers</span>
+                      </div>
+                   </article>
+                   <!-- end of group section article  -->
+           </div>
+            <!-- group container end  -->
+         </div>
+          <!-- col-md-2 section group section end -->
+
+           <!-- col-md-2 section user list start -->
+           <div class="col-md-2 sidebar pl-2 ">
+                <p class="ml-1 lead mb-2 sidebar_header pb-2">User List</p>
+                <div class="userList">
+                    <!-- single user start  -->
+                    <article class="single_user">
+                         <div class="d-flex">
+                            <a href=""> <img src="images/user.jpg"  class="notification_image" alt=""></a>
+                            <a href="#" class="pl-2" id="username">atikul islam</a>
+                         </div>
+                         <!-- <p class="statusRed"></p> -->
+                         <p class="statusGreen"></p>
+                    </article>
+                    <!-- end of single user  -->
+
+                    <!-- single user start  -->
+                    <article class="single_user">
+                        <div class="d-flex">
+                            <a href=""> <img src="images/user.jpg"  class="notification_image" alt=""></a>
+                            <a href="#" class="pl-2" id="username">atikul islam</a>
+                        </div>
+                        <!-- <p class="statusRed"></p> -->
+                        <p class="statusGreen"></p>
+                    </article>
+                    <!-- end of single user  -->
+
+                    <!-- single user start  -->
+                    <article class="single_user">
+                            <div class="d-flex">
+                              <a href=""> <img src="images/user.jpg"  class="notification_image" alt=""></a>
+                               <a href="#" class="pl-2" id="username">atikul islam</a>
+                            </div>
+                            <!-- <p class="statusRed"></p> -->
+                            <p class="statusGreen"></p>
+                    </article>
+                    <!-- end of single user  -->
+                </div>
+           </div>
+          <!-- col-md-2 section user list end -->
+      </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ///post form model  -->
+<div class="modal p-5"   id="PostFormModal" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content p-2">
+        <div class="modal-header">
+            <div class="model-title lead">Create Post</div>
+          <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="lead icon_cross">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+            <form action="" method="post">
+                <div class="card p-3">
+                    <div class="card-body p-5">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="images/user.jpg" class="notification_image_lg" />
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" name="content" id="content" placeholder="What's on your mind? jakir." />
+                            </div>
+                        </div>
+                        <div class="mediaGroup">
+                            <input type="file" name="media" id="media" class="mediaFile"/>
+                            <label for="media">
+                                <i class="material-icons">add_photo_alternate</i>&nbsp;
+                                Photo/Video
+                            </label>
+                    </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer d-flex justify-content-center py-3">
+            <input type="submit" name="post" class="btn large_btn btn-primary" value="post">
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end of post modal -->
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<!-- <script src="js/custom.js"></script> -->
+</body>
+</html>
