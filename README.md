@@ -1,4 +1,4 @@
 # facebookClone
 
 This my facebook Clone;
-To visit this site Click this link  https://nooralamkhansujon.github.io/Clone_facebook/
+To visit this site Click this link  https://nooralamkhansujon.github.io/cloneFacebook/.
